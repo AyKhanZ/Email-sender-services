@@ -2,7 +2,7 @@
 using System.Net.Mail;
 
 var service = new EmailSender();
-await service.SendEmailAsync("zeynalovayxan70@gmail.com","Subject","Hello message6757ytrhgfhjgfjhgjhgjhg");
+await service.SendEmailAsync("zeynalovayxan70@gmail.com","Subject","<h1><b>Hello message</b></h1>  6757ytrhgfhjgfjhgjhgjhg");
 
 internal class EmailSender 
 {
@@ -19,6 +19,7 @@ internal class EmailSender
         };
         
         var message = new MailMessage(userName, to, subject, body);
+        message.IsBodyHtml = true;
         await smtpClient.SendMailAsync(message);
     }
 };
