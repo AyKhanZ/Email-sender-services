@@ -1,4 +1,6 @@
-﻿namespace GoogleSmtpFluentEmailRazorPage.Models;
+﻿using System;
+
+namespace GoogleSmtpFluentEmailRazorPage.Models;
 
 public class InviteConfig
 {
